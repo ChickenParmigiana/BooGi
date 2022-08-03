@@ -18,6 +18,20 @@ const plugins = [
   'gatsby-plugin-twitter',
   'gatsby-plugin-sharp',
   'gatsby-plugin-sass',
+  'gatsby-remark-katex',
+  {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        /*
+        defaultLayouts: {
+          default: require.resolve("./src/components/mdxLayout.js"),
+        },
+        */
+        //gatsbyRemarkPlugins: [`gatsby-remark-katex`],
+        // https://github.com/gatsbyjs/gatsby/issues/6648#issuecomment-516722534
+        remarkPlugins: [require("remark-math"), require("remark-html-katex")],
+    },
+  },
   {
     resolve: `gatsby-plugin-layout`,
     options: {
