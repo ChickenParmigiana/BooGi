@@ -6,3 +6,4 @@ export const onServiceWorkerUpdateReady = () => {
     window.location.reload();
   }
 };
+import 'katex/dist/katex.css';
